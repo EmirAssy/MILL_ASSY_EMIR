@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.16660328324053958 0.9762039923792952 0.1388132244283584 4.870133095211698
-  position -1.7436406256778736 2.407394466678371 0.4815939531285165
+  orientation -0.08456526737486372 -0.9931307935039523 -0.08086991126511833 1.5330164241083404
+  position -4.075180014163536 1.984392765949117 0.3567301137737964
 }
 TexturedBackground {
 }
@@ -45,7 +45,7 @@ DEF FIRSTFACE Solid {
     Group {
       children [
         Shape {
-          appearance DEF SECONDCOlOR PBRAppearance {
+          appearance DEF SECONDCOLOR PBRAppearance {
             baseColor 0.9882352941176471 0.9137254901960784 0.30980392156862746
           }
           geometry Box {
@@ -56,7 +56,7 @@ DEF FIRSTFACE Solid {
           translation 0 0 0.9
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1 0.1
               }
@@ -67,7 +67,7 @@ DEF FIRSTFACE Solid {
           translation 0 -0.45 0.45
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 0.1 0.8
               }
@@ -78,7 +78,7 @@ DEF FIRSTFACE Solid {
           translation 0 0.45 0.45000000000000007
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 0.1 0.8
               }
@@ -90,7 +90,7 @@ DEF FIRSTFACE Solid {
           rotation 1 0 0 0.7853996938995746
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1.34 0.07
               }
@@ -102,7 +102,7 @@ DEF FIRSTFACE Solid {
           rotation 1 0 0 2.3561996938995744
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1.34 0.07
               }
@@ -121,9 +121,7 @@ DEF SECONDFACE Solid {
     Group {
       children [
         Shape {
-          appearance DEF THIRDCOLOR PBRAppearance {
-            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
-          }
+          appearance USE SECONDCOLOR
           geometry Box {
             size 0.01 1 0.1
           }
@@ -132,7 +130,7 @@ DEF SECONDFACE Solid {
           translation 0 0 -0.89
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1 0.1
               }
@@ -144,7 +142,7 @@ DEF SECONDFACE Solid {
           rotation 1 0 0 1.5707996938995747
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 0.79 0.1
               }
@@ -156,7 +154,7 @@ DEF SECONDFACE Solid {
           rotation 1 0 0 1.5707996938995747
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 0.8 0.1
               }
@@ -168,7 +166,7 @@ DEF SECONDFACE Solid {
           rotation 1 0 0 2.3561996938995744
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1.3 0.07
               }
@@ -180,7 +178,7 @@ DEF SECONDFACE Solid {
           rotation 1 0 0 3.926990306100426
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1.3 0.07
               }
@@ -198,9 +196,7 @@ DEF THIRDFACE Solid {
     Group {
       children [
         Shape {
-          appearance DEF SECONDCOlOR PBRAppearance {
-            baseColor 0.9882352941176471 0.9137254901960784 0.30980392156862746
-          }
+          appearance USE SECONDCOLOR
           geometry Box {
             size 0.01 1 0.1
           }
@@ -209,7 +205,7 @@ DEF THIRDFACE Solid {
           translation 0 0 0.9
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1 0.1
               }
@@ -220,7 +216,7 @@ DEF THIRDFACE Solid {
           translation 0 -0.45 0.45
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 0.1 0.8
               }
@@ -231,7 +227,7 @@ DEF THIRDFACE Solid {
           translation 0 0.45 0.45000000000000007
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 0.1 0.8
               }
@@ -243,7 +239,7 @@ DEF THIRDFACE Solid {
           rotation 1 0 0 0.7853996938995746
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1.34 0.07
               }
@@ -255,7 +251,7 @@ DEF THIRDFACE Solid {
           rotation 1 0 0 2.3561996938995744
           children [
             Shape {
-              appearance USE SECONDCOlOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1.34 0.07
               }
@@ -274,9 +270,7 @@ DEF FOURTHFACE Solid {
     Group {
       children [
         Shape {
-          appearance DEF THIRDCOLOR PBRAppearance {
-            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
-          }
+          appearance USE SECONDCOLOR
           geometry Box {
             size 0.01 1 0.1
           }
@@ -285,7 +279,7 @@ DEF FOURTHFACE Solid {
           translation 0 0 -0.89
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1 0.1
               }
@@ -297,7 +291,7 @@ DEF FOURTHFACE Solid {
           rotation 1 0 0 1.5707996938995747
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 0.79 0.1
               }
@@ -309,7 +303,7 @@ DEF FOURTHFACE Solid {
           rotation 1 0 0 1.5707996938995747
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 0.8 0.1
               }
@@ -321,7 +315,7 @@ DEF FOURTHFACE Solid {
           rotation 1 0 0 2.3561996938995744
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1.3 0.07
               }
@@ -333,7 +327,7 @@ DEF FOURTHFACE Solid {
           rotation 1 0 0 3.926990306100426
           children [
             Shape {
-              appearance USE THIRDCOLOR
+              appearance USE SECONDCOLOR
               geometry Box {
                 size 0.01 1.3 0.07
               }
@@ -351,7 +345,9 @@ Solid {
     Group {
       children [
         Shape {
-          appearance USE FIRSTCOLOR
+          appearance DEF THIRDCOLOR PBRAppearance {
+            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
+          }
           geometry Cylinder {
             height 1
             radius 0.05
@@ -364,14 +360,49 @@ Solid {
             staticFriction 0.02
           }
           endPoint Solid {
-            translation 0 0.49000000000034033 -3.36710467672663e-08
+            translation 0 0.48999956227673214 0.12999996632821628
             rotation 1 0 0 1.5707996938995745
             children [
               Shape {
-                appearance USE FIRSTCOLOR
+                appearance USE THIRDCOLOR
                 geometry Cylinder {
                   height 1
                   radius 0.05
+                }
+              }
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  axis 0 1 0
+                  anchor 0 0.025 0
+                }
+                endPoint Solid {
+                  translation 0 0.501 0
+                  rotation 1 0 0 7.4639200958568225e-06
+                  children [
+                    Group {
+                      children [
+                        Shape {
+                          appearance USE THIRDCOLOR
+                          geometry Box {
+                            size 0.8 0.01 0.1
+                          }
+                        }
+                        Transform {
+                          rotation 0 1 0 1.5707996938995747
+                          children [
+                            Shape {
+                              appearance USE THIRDCOLOR
+                              geometry Box {
+                                size 0.8 0.01 0.1
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                  physics Physics {
+                  }
                 }
               }
             ]
