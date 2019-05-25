@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.03313203863425405 -0.9985757677148029 0.041817510073297835 0.1558529838296688
-  position -0.045095454542325816 0.44842338689084765 3.2446532298006776
+  orientation -0.036785860401856926 -0.9983115272100067 -0.044954367019445586 1.7716562035058079
+  position -4.088999382639818 0.9163374744102329 0.049627309803922326
 }
 TexturedBackground {
 }
@@ -12,18 +12,81 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.05 0
+  translation 0 0.025 0
   children [
     Group {
       children [
-        Shape {
+        DEF S_BOTTOMBASE Shape {
           appearance DEF S_TOPANDBOTTOM PBRAppearance {
+            baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
           }
           geometry Box {
-            size 1 0.1 1
+            size 1 0.05 1
           }
+        }
+        DEF S_TOP Transform {
+          translation 0 1.05 0
+          children [
+            Shape {
+              appearance USE S_TOPANDBOTTOM
+              geometry Box {
+                size 1 0.05 1
+              }
+            }
+          ]
         }
       ]
     }
   ]
+}
+Solid {
+  translation 0.45 0.55 -0.45
+  children [
+    Group {
+      children [
+        Shape {
+          appearance DEF S_FACESOFTHEBOX PBRAppearance {
+            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
+          }
+          geometry Box {
+            size 0.1 1 0.1
+          }
+        }
+        Transform {
+          translation 0 0 0.9
+          children [
+            Shape {
+              appearance USE S_FACESOFTHEBOX
+              geometry Box {
+                size 0.1 1 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation -0.9 0 0.9
+          children [
+            Shape {
+              appearance USE S_FACESOFTHEBOX
+              geometry Box {
+                size 0.1 1 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation -0.9 0 0
+          children [
+            Shape {
+              appearance USE S_FACESOFTHEBOX
+              geometry Box {
+                size 0.1 1 0.1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(1)"
 }
