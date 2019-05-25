@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.036785860401856926 -0.9983115272100067 -0.044954367019445586 1.7716562035058079
-  position -4.088999382639818 0.9163374744102329 0.049627309803922326
+  orientation 0.16566165436289282 0.9651548432852948 0.20256442125083973 4.477988203239073
+  position -2.984567041942192 2.1210510016884654 -1.1314664536144234
 }
 TexturedBackground {
 }
@@ -11,13 +11,13 @@ TexturedBackgroundLight {
 }
 Floor {
 }
-Solid {
+DEF TOPANDBOTTOM Solid {
   translation 0 0.025 0
   children [
     Group {
       children [
         DEF S_BOTTOMBASE Shape {
-          appearance DEF S_TOPANDBOTTOM PBRAppearance {
+          appearance DEF FIRSTCOLOR PBRAppearance {
             baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
           }
           geometry Box {
@@ -28,7 +28,7 @@ Solid {
           translation 0 1.05 0
           children [
             Shape {
-              appearance USE S_TOPANDBOTTOM
+              appearance USE FIRSTCOLOR
               geometry Box {
                 size 1 0.05 1
               }
@@ -39,48 +39,72 @@ Solid {
     }
   ]
 }
-Solid {
-  translation 0.45 0.55 -0.45
+DEF FIRSTFACE Solid {
+  translation 0.495 0.55 -0.45
   children [
     Group {
       children [
         Shape {
-          appearance DEF S_FACESOFTHEBOX PBRAppearance {
-            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
+          appearance DEF SECONDCOlOR PBRAppearance {
+            baseColor 0.9882352941176471 0.9137254901960784 0.30980392156862746
           }
           geometry Box {
-            size 0.1 1 0.1
+            size 0.01 1 0.1
           }
         }
         Transform {
           translation 0 0 0.9
           children [
             Shape {
-              appearance USE S_FACESOFTHEBOX
+              appearance USE SECONDCOlOR
               geometry Box {
-                size 0.1 1 0.1
+                size 0.01 1 0.1
               }
             }
           ]
         }
         Transform {
-          translation -0.9 0 0.9
+          translation 0 -0.45 0.45
           children [
             Shape {
-              appearance USE S_FACESOFTHEBOX
+              appearance USE SECONDCOlOR
               geometry Box {
-                size 0.1 1 0.1
+                size 0.01 0.1 0.8
               }
             }
           ]
         }
         Transform {
-          translation -0.9 0 0
+          translation 0 0.45 0.45000000000000007
           children [
             Shape {
-              appearance USE S_FACESOFTHEBOX
+              appearance USE SECONDCOlOR
               geometry Box {
-                size 0.1 1 0.1
+                size 0.01 0.1 0.8
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 0.45
+          rotation 1 0 0 0.7853996938995746
+          children [
+            Shape {
+              appearance USE SECONDCOlOR
+              geometry Box {
+                size 0.01 1.34 0.07
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 0.45
+          rotation 1 0 0 2.3561996938995744
+          children [
+            Shape {
+              appearance USE SECONDCOlOR
+              geometry Box {
+                size 0.01 1.34 0.07
               }
             }
           ]
@@ -89,4 +113,238 @@ Solid {
     }
   ]
   name "solid(1)"
+}
+DEF SECONDFACE Solid {
+  translation 0.44 0.55 0.495
+  rotation 0 1 0 1.5707996938995747
+  children [
+    Group {
+      children [
+        Shape {
+          appearance DEF THIRDCOLOR PBRAppearance {
+            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
+          }
+          geometry Box {
+            size 0.01 1 0.1
+          }
+        }
+        Transform {
+          translation 0 0 -0.89
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 1 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.45000148152350783 -0.445
+          rotation 1 0 0 1.5707996938995747
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 0.79 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.4499999663289532 -0.4390000000000567
+          rotation 1 0 0 1.5707996938995747
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 0.8 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.016158327597101868 -0.4520278416794996
+          rotation 1 0 0 2.3561996938995744
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 1.3 0.07
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.012125984058543544 -0.4520278676378151
+          rotation 1 0 0 3.926990306100426
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 1.3 0.07
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(2)"
+}
+DEF THIRDFACE Solid {
+  translation -0.495 0.55 -0.45
+  children [
+    Group {
+      children [
+        Shape {
+          appearance DEF SECONDCOlOR PBRAppearance {
+            baseColor 0.9882352941176471 0.9137254901960784 0.30980392156862746
+          }
+          geometry Box {
+            size 0.01 1 0.1
+          }
+        }
+        Transform {
+          translation 0 0 0.9
+          children [
+            Shape {
+              appearance USE SECONDCOlOR
+              geometry Box {
+                size 0.01 1 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.45 0.45
+          children [
+            Shape {
+              appearance USE SECONDCOlOR
+              geometry Box {
+                size 0.01 0.1 0.8
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.45 0.45000000000000007
+          children [
+            Shape {
+              appearance USE SECONDCOlOR
+              geometry Box {
+                size 0.01 0.1 0.8
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 0.45
+          rotation 1 0 0 0.7853996938995746
+          children [
+            Shape {
+              appearance USE SECONDCOlOR
+              geometry Box {
+                size 0.01 1.34 0.07
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 0.45
+          rotation 1 0 0 2.3561996938995744
+          children [
+            Shape {
+              appearance USE SECONDCOlOR
+              geometry Box {
+                size 0.01 1.34 0.07
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(3)"
+}
+DEF FOURTHFACE Solid {
+  translation 0.445 0.5500000000000003 -0.5000014815232245
+  rotation 0 1 0 1.5707996938995747
+  children [
+    Group {
+      children [
+        Shape {
+          appearance DEF THIRDCOLOR PBRAppearance {
+            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
+          }
+          geometry Box {
+            size 0.01 1 0.1
+          }
+        }
+        Transform {
+          translation 0 0 -0.89
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 1 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.45000148152350783 -0.445
+          rotation 1 0 0 1.5707996938995747
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 0.79 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.4499999663289532 -0.4390000000000567
+          rotation 1 0 0 1.5707996938995747
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 0.8 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.016158327597101868 -0.4520278416794996
+          rotation 1 0 0 2.3561996938995744
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 1.3 0.07
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.012125984058543544 -0.4520278676378151
+          rotation 1 0 0 3.926990306100426
+          children [
+            Shape {
+              appearance USE THIRDCOLOR
+              geometry Box {
+                size 0.01 1.3 0.07
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(4)"
+}
+Solid {
+  name "solid(5)"
 }
