@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.16566165436289282 0.9651548432852948 0.20256442125083973 4.477988203239073
-  position -2.984567041942192 2.1210510016884654 -1.1314664536144234
+  orientation 0.0716430754744752 0.9946263751875036 0.07473716289722022 4.664737950998876
+  position -4.558445912380903 2.4178564842851773 0.01254082607176204
 }
 TexturedBackground {
 }
@@ -346,5 +346,23 @@ DEF FOURTHFACE Solid {
   name "solid(4)"
 }
 Solid {
+  translation 0 1.6 0
+  children [
+    Group {
+      children [
+        Shape {
+          appearance USE FIRSTCOLOR
+          geometry Cylinder {
+            height 1
+            radius 0.05
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+          }
+        }
+      ]
+    }
+  ]
   name "solid(5)"
 }
